@@ -31,19 +31,19 @@ footer {
 }
 
 .d {
-  background-image: url("/img/tom1.png");
+  background-image: url(/img/tom1.png);
 }
 
 .j {
-  background-image: url("/img/tom2.png");
+  background-image: url(/img/tom2.png);
 }
 
 .k {
-  background-image: url("img/tom3.png");
+  background-image: url(/img/tom3.png);
 }
 
 .l {
-  background-image: url(img/tom4.png);
+  background-image: url(/img/tom4.png);
 }
 
 .set {
@@ -80,4 +80,9 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+.pressed
+{
+  box-shadow: 0 3px 4px 0;
+  opacity: 0.5;
 }

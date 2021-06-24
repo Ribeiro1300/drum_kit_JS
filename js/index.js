@@ -5,6 +5,7 @@ for (var i = 0; i<n_buttons; i++)
         var bntTxt = this.innerHTML
         
         makeSound(bntTxt)
+        bntAnimation(bntTxt)
         
     })
 }
@@ -14,6 +15,7 @@ for (var i = 0;i<n_buttons;i++)
     document.addEventListener("keydown", function(event)
     {
         makeSound(event.key)
+        bntAnimation(event.key)
     })
 }
 
@@ -56,6 +58,16 @@ function makeSound(key)
             tom4.play()
             break
 
-            default:
+            default: console.log(bntTxt)
         }
+}
+
+function bntAnimation(keyPressed)
+{
+    var activeBnt = document.querySelector("."+keyPressed)
+    activeBnt.classList.add("pressed")
+    setTimeout(function()
+    {
+        activeBnt.classList.remove("pressed")
+    }, 100)
 }
